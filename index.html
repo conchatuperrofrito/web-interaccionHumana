@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centrar un div con botón de cerrar</title>
+    <style>
+      /* Estilo para el contenedor */
+      .containere {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      /* Estilo para el div interno */
+      .contente {
+        width: 300px;
+        height: 200px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      /* Estilo para el botón de cerrar */
+      .close-btne {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Botón para abrir el div -->
+
+    <!-- Contenedor -->
+    <div class="containere" id="myModal">
+      <!-- Div para centrar -->
+      <div class="contente">
+        <!-- Contenido -->
+        <p>Este es el contenido del div centrado.</p>
+        <!-- Botón para cerrar -->
+        <span class="close-btne" onclick="closeModal()">X</span>
+      </div>
+    </div>
+
+    <script>
+      // Función para abrir el div
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      // Función para cerrar el div
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
